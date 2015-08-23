@@ -37,6 +37,10 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     Snap
 
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    resize2fs_static
+
 # Init
 PRODUCT_PACKAGES += \
     init.target.rc
