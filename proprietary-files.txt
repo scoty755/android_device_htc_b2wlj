@@ -319,6 +319,8 @@ etc/firmware/widevine.b02
 etc/firmware/widevine.b03
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
+vendor/lib/libDivxDrm.so
+vendor/lib/libSHIMDivxDrm.so
 vendor/lib/libWVphoneAPI.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/drm/libdrmwvmplugin.so
