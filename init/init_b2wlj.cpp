@@ -95,7 +95,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.cdma.home.operator.alpha", "KDDI");
         property_set("gsm.sim.operator.alpha", "KDDI");
         property_set("gsm.operator.alpha", "310120");
-        property_set("ro.telephony.ril_class", "m8sprRIL");
+        property_set("ro.telephony.ril_class", "M8sprRIL");
     }
     property_get("ro.product.device", device);
     ERROR("Found bootmid %s setting build properties for %s device\n", bootmid, device);
