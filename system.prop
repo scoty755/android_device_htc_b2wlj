@@ -30,7 +30,7 @@ persist.rild.nitz_short_ons_3=
 DEVICE_PROVISIONED=1
 
 # Camera
-camera2.portability.force_api=1
+persist.camera.maxopen=3
 
 # Perf
 ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
