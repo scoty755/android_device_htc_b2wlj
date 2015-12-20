@@ -1,7 +1,5 @@
 # system.prop for b2
 
-ro.product.model=HTL23
-
 # RIL
 rild.libargs=-d /dev/smd0
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
