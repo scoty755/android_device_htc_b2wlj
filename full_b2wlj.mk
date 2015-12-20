@@ -30,6 +30,9 @@ $(call inherit-product-if-exists, vendor/htc/felica-common/felica-common-vendor.
 # Inherit from b2
 $(call inherit-product, device/htc/b2wlj/device.mk)
 
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
+
 PRODUCT_NAME := full_b2wlj
 PRODUCT_DEVICE := b2wlj
 PRODUCT_BRAND := KDDI
