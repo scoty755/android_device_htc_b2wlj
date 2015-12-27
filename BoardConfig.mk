@@ -43,7 +43,7 @@ TARGET_BOARD_INFO_FILE ?= device/htc/b2wlj/board-info.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/b2wlj/bluetooth
 
 # Includes
-TARGET_SPECIFIC_HEADER_PATH := device/htc/b2wlj/include
+TARGET_SPECIFIC_HEADER_PATH += device/htc/b2wlj/include
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
