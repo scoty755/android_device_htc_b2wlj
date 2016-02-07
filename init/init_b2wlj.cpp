@@ -85,17 +85,17 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "1.17.970.1 CL368778 release-keys");
         property_set("ro.product.device", "htc_b2wlj");
         property_set("ro.build.product", "htc_b2wlj");
+        property_set("telephony.sms.pseudo_multipart", "1");
+        property_set("ro.ril.enable.pre_r8fd=0", "1");
         property_set("ro.ril.oem.ecclist", "110,118,119,184110,184118,184119,186110,186118,186119");
-        property_set("ro.ril.enable.r8fd", "0");
-        property_set("ro.ril.enable.sdr", "0");
         property_set("ro.ril.set.mtusize", "1420");
-        property_set("ro.ril.air.enabled", "1");
-        property_set("ro.ril.wp.feature", "1");
-        property_set("ro.cdma.data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
-        property_set("ro.ril.gsm.to.lte.blind.redir", "1");
-        property_set("ro.config.svlte1x", "true");
-        property_set("ro.ril.def.agps.mode", "6");
-        property_set("ro.telephony.get_imsi_from_sim", "true");
+        property_set("ro.cdma.home.operator.numeric", "44050");
+        property_set("gsm.sim.operator.numeric", "310120");
+        property_set("gsm.operator.numeric", "310120");
+        property_set("ro.cdma.home.operator.alpha", "KDDI");
+        property_set("gsm.sim.operator.alpha", "KDDI");
+        property_set("gsm.operator.alpha", "310120");
+        property_set("ro.telephony.ril_class", "m8sprRIL");
     }
     property_get("ro.product.device", device);
     ERROR("Found bootmid %s setting build properties for %s device\n", bootmid, device);
