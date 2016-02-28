@@ -42,9 +42,6 @@ TARGET_BOARD_INFO_FILE ?= device/htc/b2wlj/board-info.txt
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/b2wlj/bluetooth
 
-# RIL
-BOARD_RIL_CLASS := ../../../device/htc/b2wlj/ril
-
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += device/htc/b2wlj/include
 
