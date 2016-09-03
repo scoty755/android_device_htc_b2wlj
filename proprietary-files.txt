@@ -163,16 +163,7 @@ vendor/lib/libmmjpeg.so
 vendor/lib/liboemcamera.so
 
 # Graphics
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
 etc/firmware/alIAF_InData_4M2M
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -192,6 +183,17 @@ vendor/lib/librs_adreno.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 
+# Graphics firmware
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
+
 # GPS
 etc/gps.conf
 vendor/lib/libgeofence.so
@@ -205,20 +207,23 @@ lib/libloc_eng.so
 lib/libgps.utils.so
 
 # Media
-etc/firmware/venus.b01
-etc/firmware/venus.mbn
-etc/firmware/venus.b03
-etc/firmware/venus.b04
-etc/firmware/venus.mdt
-etc/firmware/venus.b02
-etc/firmware/venus.b00
 vendor/lib/libqomx_jpegenc.so
+vendor/lib/libDivxDrm.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmm-color-convertor.so
+vendor/lib/libSHIMDivxDrm.so
 lib/libmmjpeg_interface.so
 
+# Media firmware
+etc/firmware/venus.b00
+etc/firmware/venus.b01
+etc/firmware/venus.b02
+etc/firmware/venus.b03
+etc/firmware/venus.b04
+etc/firmware/venus.mbn
+etc/firmware/venus.mdt
+
 # Power
-bin/mpdecision
 #vendor/lib/libthermalioctl.so
 
 # QMI
@@ -251,7 +256,8 @@ vendor/lib/libnetmgr.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
 
-# Qualcomm extra
+# Perf
+bin/mpdecision
 #vendor/lib/libqti-perfd-client.so
 
 # Sensors
@@ -269,18 +275,32 @@ etc/firmware/hcheck.b03
 etc/firmware/hcheck.mdt
 bin/hcheck
 
-# TZBSP
-bin/qseecomd
-#vendor/firmware/cmnlib.b00
-#vendor/firmware/cmnlib.b01
-#vendor/firmware/cmnlib.b02
-#vendor/firmware/cmnlib.b03
-#vendor/firmware/cmnlib.mdt
+# DRM firmware
+etc/firmware/cmnlib.b00
+etc/firmware/cmnlib.b01
+etc/firmware/cmnlib.b02
+etc/firmware/cmnlib.b03
+etc/firmware/cmnlib.mdt
+etc/firmware/dxhdcp2.b00
+etc/firmware/dxhdcp2.b01
+etc/firmware/dxhdcp2.b02
+etc/firmware/dxhdcp2.b03
+etc/firmware/dxhdcp2.mdt
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
+etc/firmware/widevine.mdt
+
+# Keymaster firmware
 vendor/firmware/keymaster.b00
 vendor/firmware/keymaster.b03
 vendor/firmware/keymaster.b01
 vendor/firmware/keymaster.b02
 vendor/firmware/keymaster.mdt
+
+# TZBSP
+bin/qseecomd
 #vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -312,15 +332,8 @@ bin/irsc_util
 
 # Widevine
 lib/libdrmdecrypt.so
-etc/firmware/widevine.mdt
-etc/firmware/widevine.b00
-etc/firmware/widevine.b01
-etc/firmware/widevine.b02
-etc/firmware/widevine.b03
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
-#vendor/lib/libDivxDrm.so < no use
-#vendor/lib/libSHIMDivxDrm.so < no use
 #vendor/lib/libWVphoneAPI.so lib/libWVphoneAPI.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/drm/libdrmwvmplugin.so
