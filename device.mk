@@ -43,8 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.target.rc \
-    init.variant.rc
+    init.target.rc
 
 # IRDA
 PRODUCT_BOOT_JARS += \
