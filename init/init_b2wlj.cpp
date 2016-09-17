@@ -46,22 +46,18 @@ void cdma_properties(char const default_cdma_sub[], char const default_network[]
 {
     property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
     property_set("ro.telephony.default_network", default_network);
-
     property_set("telephony.lteOnCdmaDevice", "1");
-    property_set("ro.ril.svdo", "true");
-    property_set("ro.ril.disable.fd.plmn.prefix", "23402,23410,23411,23420");
     property_set("ro.ril.enable.sdr", "0");
-    property_set("ro.ril.enable.gea3", "1");
-    property_set("ro.ril.enable.a53", "1");
-    property_set("ro.ril.enable.r8fd=1", "1");
     property_set("persist.radio.snapshot_enabled", "1");
     property_set("persist.radio.snapshot_timer", "22");
 }
+
 
 void gsm_properties(char const default_network[])
 {
     property_set("ro.telephony.default_network", default_network);
     property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.ril.radio.svn", "1");
 }
 
 void vendor_load_properties()
@@ -86,17 +82,22 @@ void vendor_load_properties()
         property_set("ro.product.device", "htc_b2wlj");
         property_set("ro.build.product", "htc_b2wlj");
         property_set("ro.ril.oem.ecclist", "110,118,119,184110,184118,184119,186110,186118,186119");
-        property_set("ro.ril.enable.r8fd", "0");
         property_set("ro.ril.enable.sdr", "0");
+        property_set("ro.ril.enable.r8fd", "0");
+        property_set("ro.ril.enable.pre_r8fd", "0");
+        property_set("ro.ril.disable.fd.plmn.prefix", "23402,23410,23411,23420");
         property_set("ro.ril.set.mtusize", "1420");
         property_set("ro.ril.air.enabled", "1");
         property_set("ro.ril.wp.feature", "1");
         property_set("ro.cdma.data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
+        property_set("ro.gsm.data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
+        property_set("ro.gsm.2nd_data_retry_config", "max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000");
         property_set("ro.ril.gsm.to.lte.blind.redir", "1");
         property_set("ro.config.svlte1x", "true");
         property_set("ro.ril.def.agps.mode", "6");
         property_set("ro.telephony.get_imsi_from_sim", "true");
     }
+
     property_get("ro.product.device", device);
     ERROR("Found bootmid %s setting build properties for %s device\n", bootmid, device);
 }
