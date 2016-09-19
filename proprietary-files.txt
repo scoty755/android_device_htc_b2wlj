@@ -3,6 +3,9 @@ bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
 
 # Audio
 etc/Bluetooth_cal.acdb
@@ -32,6 +35,8 @@ etc/tfa/voice_l.eq
 etc/tfa/voice.eq
 etc/tfa/voice_l.preset
 etc/tfa/voice.preset
+etc/tfa/voiceWB.eq
+etc/tfa/voiceWB_l.eq
 etc/tfa/voip.drc
 etc/tfa/voip.eq
 etc/tfa/voip_l.drc
@@ -54,8 +59,10 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/ILP0100_IPM_Code_out.bin
 etc/firmware/ILP0100_IPM_Data_out.bin
 etc/firmware/lscbuffer_rev2.bin
+lib/libalDE_SDE_TWO.so
 lib/libalDE.so
 lib/libalDE_REC.so
+lib/libalDynamicWarping_SDW_TWO.so
 lib/libalDynamicWarping.so
 lib/libalDynamicWarping_REC.so
 lib/libalIAF.so
@@ -69,6 +76,7 @@ lib/libcamera_awb.so
 lib/libmmcamera_interface.so
 lib/libmmcamera_rubik.so
 lib/libcamerapp.so
+lib/libdrmdecrypt.so
 lib/hw/camera.msm8974.so
 lib/libcameraface.so
 lib/libhtccamera.so
@@ -76,7 +84,6 @@ lib/libhtcsecure.so
 lib/libposteffect.so
 lib/libqomx_core.so
 lib/libtuning_aec.so
-lib/libFaceRetrieve.so
 lib/libtuning_aec_imx214_hdr.so
 lib/libtuning_aec_imx214_night.so
 lib/libtuning_aec_imx214_video.so
@@ -155,15 +162,28 @@ vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_wavelet_lib.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libacdbrtac.so
+vendor/lib/librpmb.so
 vendor/lib/libmmipl.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libjpegehw.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libmmjpeg.so
+vendor/lib/liblbs_core.so
+vendor/lib/libllvm-qcom.so
 vendor/lib/liboemcamera.so
+vendor/lib/liboemcrypto.so
 
 # Graphics
+etc/firmware/a225p5_pm4.fw
+etc/firmware/a225_pfp.fw
+etc/firmware/a225_pm4.fw
+etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
+etc/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw
 etc/firmware/alIAF_InData_4M2M
+etc/firmware/leia_pfp_470.fw
+etc/firmware/leia_pm4_470.fw
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -182,18 +202,6 @@ vendor/lib/librs_adreno_sha1.so
 vendor/lib/librs_adreno.so
 vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
-#vendor/lib/libuiblur.so
-
-# Graphics firmware
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
 
 # GPS
 etc/gps.conf
@@ -208,28 +216,30 @@ lib/libloc_eng.so
 lib/libgps.utils.so
 
 # Media
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libDivxDrm.so
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libSHIMDivxDrm.so
-lib/libmmjpeg_interface.so
-
-# Media firmware
-etc/firmware/venus.b00
 etc/firmware/venus.b01
-etc/firmware/venus.b02
+etc/firmware/venus.mbn
 etc/firmware/venus.b03
 etc/firmware/venus.b04
-etc/firmware/venus.mbn
 etc/firmware/venus.mdt
+etc/firmware/venus.b02
+etc/firmware/venus.b00
+vendor/lib/libqomx_jpegenc.so
+vendor/lib/libI420colorconvert.so
+vendor/lib/libmm-color-convertor.so
+lib/libmmjpeg_interface.so
 
 # Power
+bin/mpdecision
+bin/thermal-engine
+vendor/lib/libthermalclient.so
 #vendor/lib/libthermalioctl.so
 
 # QMI
+bin/qmuxd
+bin/rmt_storage
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsnetutils.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
@@ -237,29 +247,19 @@ vendor/lib/libqdi.so
 vendor/lib/libqdp.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
-vendor/lib/libsmemlog.so
 vendor/lib/libqmi.so
 
 # Radio
 bin/netmgrd
-bin/qmuxd
-bin/radish
-bin/rmt_storage
-lib/libmdmdetect.so
-lib/libril.so
 vendor/lib/libnetmgr.so
+vendor/lib/libqc-opt.so
 vendor/lib/libril-qc-qmi-1.so
 vendor/lib/libril-qcril-hook-oem.so
-
-# Perf
-bin/mpdecision
-#vendor/lib/libqti-perfd-client.so
 
 # Sensors
 lib/hw/sensors.msm8974.so
@@ -276,76 +276,67 @@ etc/firmware/hcheck.b03
 etc/firmware/hcheck.mdt
 bin/hcheck
 
-# DRM firmware
-etc/firmware/cmnlib.b00
-etc/firmware/cmnlib.b01
-etc/firmware/cmnlib.b02
-etc/firmware/cmnlib.b03
-etc/firmware/cmnlib.mdt
-etc/firmware/dxhdcp2.b00
-etc/firmware/dxhdcp2.b01
-etc/firmware/dxhdcp2.b02
-etc/firmware/dxhdcp2.b03
-etc/firmware/dxhdcp2.mdt
-etc/firmware/widevine.b00
-etc/firmware/widevine.b01
-etc/firmware/widevine.b02
-etc/firmware/widevine.b03
-etc/firmware/widevine.mdt
-
-# Keymaster firmware
+# DRM
+bin/qseecomd
+vendor/firmware/cmnlib.b00
+vendor/firmware/cmnlib.b01
+vendor/firmware/cmnlib.b02
+vendor/firmware/cmnlib.b03
+vendor/firmware/cmnlib.mdt
 vendor/firmware/keymaster.b00
 vendor/firmware/keymaster.b03
 vendor/firmware/keymaster.b01
 vendor/firmware/keymaster.b02
 vendor/firmware/keymaster.mdt
-
-# TZBSP
-bin/qseecomd
-#vendor/lib/libdrmdiag.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
+vendor/lib/drm/libdrmwvmplugin.so
+#vendor/lib/drm/libfwdlockengine.so
 vendor/lib/libQSEEComAPI.so
-vendor/lib/librpmb.so
-vendor/lib/libssd.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/libWVphoneAPI.so
+vendor/lib/libdrmfs.so
+#vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 # WIRELESS
+bin/radish
 bin/hci_qcomm_init
-#vendor/firmware/wcnss.b00
-#vendor/firmware/wcnss.b01
-#vendor/firmware/wcnss.b02
-#vendor/firmware/wcnss.b04
-#vendor/firmware/wcnss.b06
-#vendor/firmware/wcnss.b07
-#vendor/firmware/wcnss.b08
-#vendor/firmware/wcnss.b09
-#vendor/firmware/wcnss.mdt
+vendor/firmware/wcnss.b00
+vendor/firmware/wcnss.b01
+vendor/firmware/wcnss.b02
+vendor/firmware/wcnss.b04
+vendor/firmware/wcnss.b06
+vendor/firmware/wcnss.b07
+vendor/firmware/wcnss.b08
+vendor/firmware/wcnss.b09
+vendor/firmware/wcnss.mdt
+
+#App
+#app/CIRModule.apk
+#priv-app/EasyAccessService.apk
 
 #IR
-#app/CIRModule/CIRModule.apk:app/CIRModule.apk
 bin/cir_fw_update
 etc/cir.img
-#framework/htcirlibs.jar
 lib/libhtcirinterface_jni.so
 
 # IRSC
 bin/irsc_util
 
 # Widevine
-lib/libdrmdecrypt.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-#vendor/lib/libWVphoneAPI.so lib/libWVphoneAPI.so
-vendor/lib/libWVStreamControlAPI_L1.so
-vendor/lib/drm/libdrmwvmplugin.so
-#vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
+etc/firmware/widevine.mdt
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
 
-# HTC / Other
+# etc
 lib/libalIAF.so
 lib/hw/consumerir.default.so
 lib/libhtc_depthmap.so
 vendor/lib/libscve_stub.so
+vendor/lib/libssd.so
 vendor/lib/libscve.so
 bin/ATFWD-daemon
 bin/ptt_socket_app

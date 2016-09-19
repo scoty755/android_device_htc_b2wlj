@@ -25,51 +25,178 @@
 # 0PAG20000 - International
 
 TARGET_OTA_ASSERT_DEVICE := b2,b2wlj,htc_b2wlj,b2ul
-
-# For Japan device
-JPN_FELICA_DEVICE := true
-
-# Inherit from common msm8974-common
--include device/htc/msm8974-common/BoardConfigCommon.mk
-
-# Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/b2wlj/mkbootimg.mk
-TARGET_KERNEL_CONFIG := cm_b2wlj_defconfig
-
-# Assertions
 TARGET_BOARD_INFO_FILE ?= device/htc/b2wlj/board-info.txt
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/b2wlj/bluetooth
+BOARD_VENDOR := htc
 
-# Includes
-TARGET_SPECIFIC_HEADER_PATH += device/htc/b2wlj/include
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8974
+TARGET_NO_BOOTLOADER := true
+
+# Platform
+TARGET_BOARD_PLATFORM := msm8974
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := krait
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+
+# Kernel
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
+BOARD_CUSTOM_BOOTIMG_MK := device/htc/b2wlj/mkbootimg.mk
+TARGET_KERNEL_CONFIG := cm_b2wlj_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8974
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+
+# Audio
+AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
+BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+AUDIO_FEATURE_ENABLED_FM := true
+AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
+AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/b2wlj/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DPROPERTY_PERMS_APPEND='{"htc.camera.sensor.", AID_CAMERA, 0}, {"camera.4k2k.", AID_MEDIA, 0},'
-TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_ext
 USE_DEVICE_SPECIFIC_CAMERA := true
+
+# Charge mode
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+
+# Font
+EXTENDED_FONT_FOOTPRINT := true
+
+# Graphics
+TARGET_USES_ION := true
+TARGET_USES_OVERLAY := true
+USE_OPENGL_RENDERER := true
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+
+# Includes
+TARGET_SPECIFIC_HEADER_PATH := device/htc/b2wlj/include
+
+# Libc extensions
+BOARD_PROVIDES_ADDITIONAL_BIONIC_STATIC_LIBS += libc_htc_symbols
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8974
 
+# Power
+TARGET_POWERHAL_VARIANT := qcom
+
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+
+# RPC
+TARGET_NO_RPC := true
+
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
+
+# Wifi
+BOARD_HAS_QCOM_WLAN := true
+BOARD_WLAN_DEVICE := qcwcn
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+TARGET_USES_WCNSS_CTRL := true
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WIFI_DRIVER_FW_PATH_AP := "ap"
+
+# Webkit
+ENABLE_WEBGL := true
+TARGET_FORCE_CPU_UPLOAD := true
+
 # Partitions
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 25165824
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2818572288
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1476395008
+BOARD_FLASH_BLOCK_SIZE := 131072
+TARGET_RECOVERY_DEVICE_MODULES += chargeled
+TARGET_USERIMAGES_USE_EXT4 := true
+
+ifeq ($(HOST_OS),linux)
+TARGET_USERIMAGES_USE_F2FS := true
+else
+TARGET_USERIMAGES_USE_F2FS := false
+endif
+
+# Recovery
+BOARD_HAS_LARGE_FILESYSTEM := true
+BOARD_HAS_NO_MISC_PARTITION := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_RECOVERY_SWIPE := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+BOARD_USES_MMCUTILS := true
+TARGET_RECOVERY_FSTAB := device/htc/b2wlj/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/htc/b2wlj/sepolicy
 
+BOARD_SEPOLICY_UNION += \
+    cir_fw_update.te \
+    device.te \
+    file_contexts \
+    file.te \
+    hcheck.te \
+    init.te \
+    kernel.te \
+    mediaserver.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    platform_app.te \
+    property_contexts \
+    recovery.te \
+    radio.te \
+    rmt_storage.te \
+    system_app.te \
+    system_server.te \
+    tap2wake_dev.te \
+    thermal-engine.te \
+    ueventd.te \
+    vibe_dev.te \
+    vold.te \
+    wpa.te
+
 # Vendor Init
-TARGET_INIT_VENDOR_LIB := libinit_b2wlj
-TARGET_RECOVERY_DEVICE_MODULES := libinit_b2wlj
 TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_b2wlj
+TARGET_LIBINIT_DEFINES_FILE := device/htc/b2wlj/init/init_b2wlj.c
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/b2wlj/releasetools
 
-# Inherit from the proprietary version
--include vendor/htc/b2wlj/BoardConfigVendor.mk
-
+# Hardware
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+    device/htc/b2wlj/cmhw \
+    hardware/cyanogen/cmhw

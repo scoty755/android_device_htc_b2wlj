@@ -21,8 +21,8 @@
 # lines, full and maguro, hence its name.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit b2-specific vendor tree
+$(call inherit-product-if-exists, vendor/htc/b2wlj/b2wlj-vendor.mk)
 
 # FeliCa vendor tree
 $(call inherit-product-if-exists, vendor/htc/felica-common/felica-common-vendor.mk)

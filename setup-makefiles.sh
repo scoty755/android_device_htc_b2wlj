@@ -104,7 +104,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifeq ($(TARGET_DEVICE),b2wlj)
+ifneq (\$(filter b2wlj,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff
