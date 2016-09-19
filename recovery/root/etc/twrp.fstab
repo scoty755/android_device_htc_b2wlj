@@ -5,9 +5,9 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-/boot           emmc        /dev/block/mmcblk0p42  flags=backup=1
-/system         ext4        /dev/block/mmcblk0p45  flags=backup=1;wipeingui;
-/cache          ext4        /dev/block/mmcblk0p46  flags=backup=1;wipeingui;wipeduringfactoryreset;canencryptbackup=1
-/data           ext4        /dev/block/mmcblk0p47  flags=backup=1;wipeingui;wipeduringfactoryreset;canencryptbackup=1;userdataencryptbackup=1
+/boot           emmc        /dev/block/platform/msm_sdcc.1/by-name/boot  flags=backup=1
+/system         ext4        /dev/block/platform/msm_sdcc.1/by-name/system  flags=backup=1;wipeingui;
+/cache          ext4        /dev/block/platform/msm_sdcc.1/by-name/cache  flags=backup=1;wipeingui;wipeduringfactoryreset;canencryptbackup=1
+/data           ext4        /dev/block/platform/msm_sdcc.1/by-name/userdata  flags=backup=1;wipeingui;wipeduringfactoryreset;canencryptbackup=1;userdataencryptbackup=1
 /external_sd    vfat        /dev/block/mmcblk1p1   /dev/block/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable
 /usb-otg        vfat        /dev/block/sda1        /dev/block/sda     flags=display="USB-OTG";storage;wipeingui;removable

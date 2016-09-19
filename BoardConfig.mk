@@ -49,9 +49,7 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/b2wlj/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_b2wlj_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
@@ -95,9 +93,6 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 # Includes
 TARGET_SPECIFIC_HEADER_PATH := device/htc/b2wlj/include
 
-# Libc extensions
-BOARD_PROVIDES_ADDITIONAL_BIONIC_STATIC_LIBS += libc_htc_symbols
-
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
@@ -139,7 +134,6 @@ BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2818572288
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1476395008
 BOARD_FLASH_BLOCK_SIZE := 131072
-TARGET_RECOVERY_DEVICE_MODULES += chargeled
 TARGET_USERIMAGES_USE_EXT4 := true
 
 ifeq ($(HOST_OS),linux)
@@ -158,42 +152,20 @@ BOARD_USES_MMCUTILS := true
 TARGET_RECOVERY_FSTAB := device/htc/b2wlj/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/b2wlj/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    cir_fw_update.te \
-    device.te \
-    file_contexts \
-    file.te \
-    hcheck.te \
-    init.te \
-    kernel.te \
-    mediaserver.te \
-    mm-qcamerad.te \
-    mpdecision.te \
-    platform_app.te \
-    property_contexts \
-    recovery.te \
-    radio.te \
-    rmt_storage.te \
-    system_app.te \
-    system_server.te \
-    tap2wake_dev.te \
-    thermal-engine.te \
-    ueventd.te \
-    vibe_dev.te \
-    vold.te \
-    wpa.te
-
-# Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_b2wlj
-TARGET_LIBINIT_DEFINES_FILE := device/htc/b2wlj/init/init_b2wlj.c
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/b2wlj/releasetools
+# TWRP specific build flags
+RECOVERY_VARIANT := twrp
+DEVICE_RESOLUTION := 1080x1920
+TW_NO_USB_STORAGE := true
+TW_NO_SCREEN_BLANK := true
+TW_MAX_BRIGHTNESS := 255
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+TW_IGNORE_MT_POSITION_0 := true
 
 # Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
