@@ -52,7 +52,6 @@ void cdma_properties(char const default_cdma_sub[], char const default_network[]
     property_set("persist.radio.snapshot_timer", "22");
 }
 
-
 void gsm_properties(char const default_network[])
 {
     property_set("ro.telephony.default_network", default_network);
@@ -74,6 +73,7 @@ void vendor_load_properties()
     property_get("ro.boot.mid", bootmid);
 
     if (strstr(bootmid, "0PAG10000")) {
+        /* b2wlj */
         common_properties();
         cdma_properties("0", "10");
         property_set("ro.product.model", "HTL23");
@@ -96,6 +96,14 @@ void vendor_load_properties()
         property_set("ro.config.svlte1x", "true");
         property_set("ro.ril.def.agps.mode", "6");
         property_set("ro.telephony.get_imsi_from_sim", "true");
+    } else {
+        /* b2ul */
+        common_properties();
+        gsm_properties("9");
+        property_set("ro.product.model", "HTC Butterfly 2");
+        property_set("ro.build.fingerprint", "htc/htc_asia_wwe/htc_b2ul:4.4.4/KTU84P/421314.5:user/release-keys");
+        property_set("ro.build.description", "2.07.707.5 CL421314 release-keys");
+        property_set("ro.product.device", "htc_b2ul");
     }
 
     property_get("ro.product.device", device);
