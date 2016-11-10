@@ -333,10 +333,10 @@ bin/irsc_util
 
 # Widevine
 lib/libdrmdecrypt.so
-vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvdrm_L3.so
 vendor/lib/libwvm.so
 #vendor/lib/libWVphoneAPI.so lib/libWVphoneAPI.so
-vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/drm/libdrmwvmplugin.so
 #vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
