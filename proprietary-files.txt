@@ -48,6 +48,7 @@ vendor/lib/soundfx/libqcreverb.so
 # Camera
 bin/mm-qcamera-app
 bin/mm-qcamera-daemon
+etc/firmware/alIAF_InData_4M2M
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
@@ -161,28 +162,6 @@ vendor/lib/libjpegehw.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libmmjpeg.so
 vendor/lib/liboemcamera.so
-
-# Graphics
-etc/firmware/alIAF_InData_4M2M
-vendor/lib/egl/eglsubAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30-a3xx.so
-vendor/lib/libc2d30.so
-vendor/lib/libCB.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
-vendor/lib/libOpenVG.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/librs_adreno.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/libsc-a3xx.so
-#vendor/lib/libuiblur.so
 
 # Graphics firmware
 etc/firmware/a225p5_pm4.fw
