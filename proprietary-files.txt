@@ -287,11 +287,6 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
-etc/firmware/widevine.b00
-etc/firmware/widevine.b01
-etc/firmware/widevine.b02
-etc/firmware/widevine.b03
-etc/firmware/widevine.mdt
 
 # Keymaster firmware
 vendor/firmware/keymaster.b00
@@ -333,13 +328,19 @@ bin/irsc_util
 
 # Widevine
 lib/libdrmdecrypt.so
-vendor/lib/libwvdrm_L3.so
-vendor/lib/libwvm.so
-#vendor/lib/libWVphoneAPI.so lib/libWVphoneAPI.so
-vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/drm/libdrmwvmplugin.so
-#vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+#vendor/lib/mediadrm/libdrmclearkeyplugin.so
+
+# Widevine firmware
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
+etc/firmware/widevine.mdt
 
 # HTC / Other
 lib/libalIAF.so
