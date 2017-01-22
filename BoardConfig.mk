@@ -33,7 +33,6 @@ JPN_FELICA_DEVICE := true
 -include device/htc/msm8974-common/BoardConfigCommon.mk
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/b2wlj/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_b2wlj_defconfig
 
 # Assertions
