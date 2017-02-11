@@ -3,11 +3,15 @@
 export DEVICE=b2wlj
 export VENDOR=htc
 
+export DEVICE_BRINGUP_YEAR=2014
+
+
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
 (cat << EOF) > $MAKEFILE
 # Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
