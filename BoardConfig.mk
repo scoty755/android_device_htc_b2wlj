@@ -33,7 +33,7 @@ JPN_FELICA_DEVICE := true
 -include device/htc/msm8974-common/BoardConfigCommon.mk
 
 # Kernel
-TARGET_KERNEL_CONFIG := cm_b2wlj_defconfig
+TARGET_KERNEL_CONFIG := lineageos_b2wlj_defconfig
 
 # Assertions
 TARGET_BOARD_INFO_FILE ?= device/htc/b2wlj/board-info.txt

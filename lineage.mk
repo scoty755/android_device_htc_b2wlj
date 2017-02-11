@@ -16,10 +16,10 @@
 
 $(call inherit-product, device/htc/b2wlj/full_b2wlj.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_b2wlj
+PRODUCT_NAME := lineage_b2wlj
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="htc/HTL23_jp_kdi/htc_b2wlj:4.4.4/KTU84P/515340.5:user/release-keys" \
