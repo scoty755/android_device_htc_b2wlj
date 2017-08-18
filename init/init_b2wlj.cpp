@@ -31,10 +31,13 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "vendor_init.h"
+#include <android-base/properties.h>
+
 #include "property_service.h"
+#include "vendor_init.h"
 #include "log.h"
-#include "util.h"
+
+using android::base::GetProperty;
 
 void property_override(char const prop[], char const value[])
 {
@@ -49,27 +52,27 @@ void property_override(char const prop[], char const value[])
 
 void common_properties()
 {
-    property_override("rild.libargs", "-d /dev/smd0");
-    property_override("ro.ril.hsdpa.category", "14");
-    property_override("ro.ril.hsxpa", "4");
-    property_override("ro.ril.disable.cpc", "1");
+    property_set("rild.libargs", "-d /dev/smd0");
+    property_set("ro.ril.hsdpa.category", "14");
+    property_set("ro.ril.hsxpa", "4");
+    property_set("ro.ril.disable.cpc", "1");
 }
 
 void cdma_properties(char const default_cdma_sub[], char const default_network[])
 {
-    property_override("ro.telephony.default_cdma_sub", default_cdma_sub);
-    property_override("ro.telephony.default_network", default_network);
-    property_override("telephony.lteOnCdmaDevice", "1");
-    property_override("ro.ril.enable.sdr", "0");
-    property_override("persist.radio.snapshot_enabled", "1");
-    property_override("persist.radio.snapshot_timer", "22");
+    property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
+    property_set("ro.telephony.default_network", default_network);
+    property_set("telephony.lteOnCdmaDevice", "1");
+    property_set("ro.ril.enable.sdr", "0");
+    property_set("persist.radio.snapshot_enabled", "1");
+    property_set("persist.radio.snapshot_timer", "22");
 }
 
 void gsm_properties(char const default_network[])
 {
-    property_override("ro.telephony.default_network", default_network);
-    property_override("telephony.lteOnGsmDevice", "1");
-    property_override("ro.ril.radio.svn", "1");
+    property_set("ro.telephony.default_network", default_network);
+    property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.ril.radio.svn", "1");
 }
 
 void vendor_load_properties()
@@ -118,6 +121,6 @@ void vendor_load_properties()
         property_override("ro.product.device", "htc_b2ul");
     }
 
-    device = property_get("ro.product.device");
-    ERROR("Found bootmid %s setting build properties for %s device\n", bootmid.c_str(), device.c_str());
+    device = GetProperty("ro.product.device", "");
+    LOG(ERROR) << "Found bootmid '" << bootmid.c_str() << "' setting build properties for '" << device.c_str() << "' device\n";
 }
