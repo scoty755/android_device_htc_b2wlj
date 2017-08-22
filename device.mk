@@ -15,7 +15,9 @@
 #
 
 # overlays
-DEVICE_PACKAGE_OVERLAYS += device/htc/b2wlj/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Inherit b2-specific vendor tree
 $(call inherit-product-if-exists, vendor/htc/b2wlj/b2wlj-vendor.mk)
