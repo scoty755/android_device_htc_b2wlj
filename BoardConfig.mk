@@ -63,10 +63,6 @@ BOARD_RIL_CLASS := ../../../device/htc/b2wlj/ril
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2818572288
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1476395008
 
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/b2wlj/sepolicy
-
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_b2wlj
 TARGET_RECOVERY_DEVICE_MODULES := libinit_b2wlj
