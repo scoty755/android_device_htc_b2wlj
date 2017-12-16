@@ -55,6 +55,7 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 
 # HIDL
 DEVICE_MANIFEST_FILE := device/htc/b2wlj/manifest.xml
+DEVICE_MATRIX_FILE := device/htc/b2wlj/compatibility_matrix.xml
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2818572288
