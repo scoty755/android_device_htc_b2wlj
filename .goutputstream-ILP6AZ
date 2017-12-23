@@ -376,7 +376,7 @@ etc/firmware/widevine.mdt
 # WiFi
 bin/ptt_socket_app
 
-# WiFi firmware
+# WiFi firmware - pinned to HTC package 5.07.1700.6 version
 #vendor/firmware/wcnss.b00
 #vendor/firmware/wcnss.b01
 #vendor/firmware/wcnss.b02
