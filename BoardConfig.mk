@@ -1,4 +1,5 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
+#               2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -63,7 +64,6 @@ BOARD_SEPOLICY_DIRS += device/htc/b2wlj/sepolicy
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_b2wlj
 TARGET_RECOVERY_DEVICE_MODULES := libinit_b2wlj
-TARGET_UNIFIED_DEVICE := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/b2wlj/releasetools
