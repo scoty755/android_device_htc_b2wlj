@@ -76,6 +76,7 @@ lib/libcamera_af.so
 lib/libcamera_awb.so
 lib/libmmcamera_interface.so
 lib/libmmcamera_rubik.so
+lib/libmmjpeg_interface.so
 lib/libcamerapp.so
 lib/hw/camera.msm8974.so:lib/hw/camera.vendor.msm8974.so|19740b60ea36ac6c3573c9a431b9f223b71a59cb
 lib/libcameraface.so
@@ -113,6 +114,7 @@ vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libjpegehw.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libmmjpeg.so
+vendor/lib/libqomx_jpegenc.so
 vendor/lib/liboemcamera.so
 
 # Camera chromatix
@@ -199,12 +201,11 @@ lib/libloc_eng.so
 lib/libgps.utils.so
 
 # Media
-vendor/lib/libqomx_jpegenc.so
-vendor/lib/libDivxDrm.so
-vendor/lib/libI420colorconvert.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libSHIMDivxDrm.so
-lib/libmmjpeg_interface.so
+vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAmrwbplusDec.so
+vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxWmaDec.so
 
 # Media firmware
 etc/firmware/venus.b00
