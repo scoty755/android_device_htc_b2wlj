@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2015-2016 The CyanogenMod Project
+#               2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +20,12 @@ $(call inherit-product, device/htc/b2wlj/full_b2wlj.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_b2wlj
+PRODUCT_DEVICE := b2wlj
+PRODUCT_BRAND := KDDI
+PRODUCT_MODEL := HTC J butterfly
+PRODUCT_MANUFACTURER := HTC
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="htc/HTL23_jp_kdi/htc_b2wlj:4.4.4/KTU84P/515340.5:user/release-keys" \
