@@ -3,6 +3,8 @@ bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
+vendor/lib/libscve.so
+vendor/lib/libscve_stub.so
 
 # Audio
 etc/Bluetooth_cal.acdb
@@ -12,10 +14,9 @@ etc/Global_cal.acdb
 etc/Handset_cal.acdb
 etc/Hdmi_cal.acdb
 etc/Headset_cal.acdb
-etc/RT5501
 etc/Speaker_cal.acdb
-etc/sound_mfg.txt
-etc/sound_mfg_DMIC.txt
+
+# Audio amplifier
 etc/tfa/playback.drc
 etc/tfa/playback.eq
 etc/tfa/playback_l.drc
@@ -38,25 +39,29 @@ etc/tfa/voip_l.drc
 etc/tfa/voip_l.eq
 etc/tfa/voip_l.preset
 etc/tfa/voip.preset
+etc/RT5501
+etc/sound_mfg_DMIC.txt
+etc/sound_mfg.txt
+
+# Audio libraries
 vendor/lib/libacdbloader.so
+vendor/lib/libacdbmapper.so
+vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libqcreverb.so
 
+# Bluetooth
+bin/hci_qcomm_init
+
 # Camera
 bin/mm-qcamera-app
 bin/mm-qcamera-daemon
-etc/firmware/alIAF_InData_4M2M
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/ILP0100_IPM_Code_out.bin
-etc/firmware/ILP0100_IPM_Data_out.bin
-etc/firmware/lscbuffer_rev2.bin
 lib/libalDE.so
 lib/libalDE_REC.so
+lib/libalIAF.so
 lib/libalDynamicWarping.so
 lib/libalDynamicWarping_REC.so
 lib/libalIAF.so
@@ -72,12 +77,94 @@ lib/libmmcamera_rubik.so
 lib/libcamerapp.so
 lib/hw/camera.msm8974.so
 lib/libcameraface.so
+lib/libhtc_depthmap.so
 lib/libhtccamera.so
 lib/libhtcsecure.so
 lib/libposteffect.so
 lib/libqomx_core.so
 lib/libtuning_aec.so
 lib/libFaceRetrieve.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_vpe_module.so
+vendor/lib/libmmcamera2_wnr_module.so
+vendor/lib/libmmcamera_cac_lib.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_hdr_gb_lib.so
+vendor/lib/libmmcamera_hdr_lib.so
+vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_imx214.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_wavelet_lib.so
+vendor/lib/libqomx_jpegdec.so
+vendor/lib/libmmipl.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/libjpegehw.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libmmjpeg.so
+vendor/lib/liboemcamera.so
+
+# Camera chromatix
+vendor/lib/libchromatix_ov2722_subcam_default_video.so
+vendor/lib/libchromatix_ov2722_subcam_common.so
+vendor/lib/libchromatix_ov2722_subcam_preview.so
+vendor/lib/libchromatix_s5k5e_common.so
+vendor/lib/libchromatix_s5k5e_default_video.so
+vendor/lib/libchromatix_s5k5e_fov65_common.so
+vendor/lib/libchromatix_s5k5e_fov65_default_video.so
+vendor/lib/libchromatix_s5k5e_fov65_hdr.so
+vendor/lib/libchromatix_s5k5e_fov65_preview.so
+vendor/lib/libchromatix_s5k5e_hdr.so
+vendor/lib/libchromatix_s5k5e_preview.so
+vendor/lib/libchromatix_imx214_common.so
+vendor/lib/libchromatix_imx214_default_video.so
+vendor/lib/libchromatix_imx214_hdr.so
+vendor/lib/libchromatix_imx214_hfr.so
+vendor/lib/libchromatix_imx214_hfr_60fps.so
+vendor/lib/libchromatix_imx214_preview.so
+vendor/lib/libchromatix_imx214_zoe.so
+
+# Camera eeproms
+vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
+vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
+vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
+vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
+vendor/lib/libmmcamera_truly_cm7700_eeprom.so
+
+# Camera firmware
+etc/firmware/alIAF_InData_4M2M
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
+etc/firmware/ILP0100_IPM_Code_out.bin
+etc/firmware/ILP0100_IPM_Data_out.bin
+etc/firmware/lscbuffer_rev2.bin
+etc/hldm.bin
+etc/hltrd.bin
+etc/hltof.bin
+
+# Camera sensors
+vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
+vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so
+vendor/lib/libmmcamera_ov2722_subcam.so
+vendor/lib/libmmcamera_ov5648_oty5f03.so
+vendor/lib/libmmcamera_ov8865_q8v18a.so
+vendor/lib/libmmcamera_s5k5e.so
+vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
+vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so
+vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so
+vendor/lib/libmmcamera_sp1628.so
+
+# Camera sensors tuning
 lib/libtuning_aec_imx214_hdr.so
 lib/libtuning_aec_imx214_night.so
 lib/libtuning_aec_imx214_video.so
@@ -99,69 +186,9 @@ lib/libtuning_awb_imx214.so
 lib/libtuning_awb_ov2722_subcam.so
 lib/libtuning_awb_s5k5e.so
 lib/libtuning_awb_s5k5e_fov65.so
-vendor/lib/libacdbmapper.so
-vendor/lib/libchromatix_ov2722_subcam_default_video.so
-vendor/lib/libchromatix_ov2722_subcam_common.so
-vendor/lib/libchromatix_ov2722_subcam_preview.so
-vendor/lib/libchromatix_s5k5e_common.so
-vendor/lib/libchromatix_s5k5e_default_video.so
-vendor/lib/libchromatix_s5k5e_fov65_common.so
-vendor/lib/libchromatix_s5k5e_fov65_default_video.so
-vendor/lib/libchromatix_s5k5e_fov65_hdr.so
-vendor/lib/libchromatix_s5k5e_fov65_preview.so
-vendor/lib/libchromatix_s5k5e_hdr.so
-vendor/lib/libchromatix_s5k5e_preview.so
-vendor/lib/libchromatix_imx214_common.so
-vendor/lib/libchromatix_imx214_default_video.so
-vendor/lib/libchromatix_imx214_hdr.so
-vendor/lib/libchromatix_imx214_hfr.so
-vendor/lib/libchromatix_imx214_hfr_60fps.so
-vendor/lib/libchromatix_imx214_preview.so
-vendor/lib/libchromatix_imx214_zoe.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmcamera2_vpe_module.so
-vendor/lib/libmmcamera2_wnr_module.so
-vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
-vendor/lib/libmmcamera_SKUAB_ST_s5k4e1.so
-vendor/lib/libmmcamera_cac_lib.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_hdr_gb_lib.so
-vendor/lib/libmmcamera_hdr_lib.so
-vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_imx214.so
-vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
-vendor/lib/libmmcamera_ov2722_subcam.so
-vendor/lib/libmmcamera_ov5648_oty5f03.so
-vendor/lib/libmmcamera_ov8865_q8v18a.so
-vendor/lib/libmmcamera_s5k5e.so
-vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
-vendor/lib/libmmcamera_skuf_ov12830_p12v01c.so
-vendor/lib/libmmcamera_skuf_ov5648_p5v23c.so
-vendor/lib/libmmcamera_sp1628.so
-vendor/lib/libmmcamera_sunny_p12v01m_eeprom.so
-vendor/lib/libmmcamera_sunny_p5v23c_eeprom.so
-vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
-vendor/lib/libmmcamera_tintless_algo.so
-vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_truly_cm7700_eeprom.so
-vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_wavelet_lib.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libjpegehw.so
-vendor/lib/libjpegdhw.so
-vendor/lib/libmmjpeg.so
-vendor/lib/liboemcamera.so
+
+# Charger
+bin/hvdcp
 
 # Graphics firmware
 etc/firmware/a225p5_pm4.fw
@@ -240,6 +267,9 @@ vendor/lib/libril-qcril-hook-oem.so
 bin/mpdecision
 #vendor/lib/libqti-perfd-client.so
 
+# RIL
+bin/ATFWD-daemon
+
 # Sensors
 lib/hw/sensors.msm8974.so
 
@@ -247,13 +277,17 @@ lib/hw/sensors.msm8974.so
 bin/time_daemon
 vendor/lib/libtime_genoff.so
 
-# TrustZone
-etc/firmware/hcheck.b00
-etc/firmware/hcheck.b01
-etc/firmware/hcheck.b02
-etc/firmware/hcheck.b03
-etc/firmware/hcheck.mdt
+# DRM and SEE
 bin/hcheck
+bin/qseecomd
+lib/libdrmdecrypt.so
+vendor/lib/mediadrm/libdrmclearkeyplugin.so
+#vendor/lib/libdrmdiag.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libQSEEComAPI.so
+vendor/lib/librpmb.so
+vendor/lib/libssd.so
 
 # DRM firmware
 etc/firmware/cmnlib.b00
@@ -266,6 +300,11 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
+etc/firmware/hcheck.b00
+etc/firmware/hcheck.b01
+etc/firmware/hcheck.b02
+etc/firmware/hcheck.b03
+etc/firmware/hcheck.mdt
 
 # Graphics - from bacon
 vendor/lib/egl/eglsubAndroid.so|cefa669b1d8e0b05afb46d435e7c9f65bfabea02
@@ -295,17 +334,35 @@ vendor/firmware/keymaster.b01
 vendor/firmware/keymaster.b02
 vendor/firmware/keymaster.mdt
 
-# TZBSP
-bin/qseecomd
-#vendor/lib/libdrmdiag.so
-vendor/lib/libdrmfs.so
-vendor/lib/libdrmtime.so
-vendor/lib/libQSEEComAPI.so
-vendor/lib/librpmb.so
-vendor/lib/libssd.so
+# IRDA
+#app/CIRModule/CIRModule.apk:app/CIRModule.apk
+bin/cir_fw_update
+etc/cir.img
+#framework/htcirlibs.jar
+lib/hw/consumerir.default.so
+lib/libhtcirinterface_jni.so
 
-# WIRELESS
-bin/hci_qcomm_init
+# IRSC
+bin/irsc_util
+
+# Widevine
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+
+# Widevine firmware
+etc/firmware/widevine.b00
+etc/firmware/widevine.b01
+etc/firmware/widevine.b02
+etc/firmware/widevine.b03
+etc/firmware/widevine.mdt
+
+# WiFi
+bin/ptt_socket_app
+
+# WiFi firmware
 #vendor/firmware/wcnss.b00
 #vendor/firmware/wcnss.b01
 #vendor/firmware/wcnss.b02
@@ -316,41 +373,3 @@ bin/hci_qcomm_init
 #vendor/firmware/wcnss.b09
 #vendor/firmware/wcnss.mdt
 
-#IR
-#app/CIRModule/CIRModule.apk:app/CIRModule.apk
-bin/cir_fw_update
-etc/cir.img
-#framework/htcirlibs.jar
-lib/libhtcirinterface_jni.so
-
-# IRSC
-bin/irsc_util
-
-# Widevine
-lib/libdrmdecrypt.so
-vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L1.so
-#vendor/lib/mediadrm/libdrmclearkeyplugin.so
-
-# Widevine firmware
-etc/firmware/widevine.b00
-etc/firmware/widevine.b01
-etc/firmware/widevine.b02
-etc/firmware/widevine.b03
-etc/firmware/widevine.mdt
-
-# HTC / Other
-lib/libalIAF.so
-lib/hw/consumerir.default.so
-lib/libhtc_depthmap.so
-vendor/lib/libscve_stub.so
-vendor/lib/libscve.so
-bin/ATFWD-daemon
-bin/ptt_socket_app
-etc/hldm.bin
-etc/hltrd.bin
-etc/hltof.bin
-bin/hvdcp
