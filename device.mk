@@ -49,6 +49,9 @@ PRODUCT_PACKAGES += \
     init.target.rc
 
 # IRDA
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl
+
 PRODUCT_BOOT_JARS += \
     htcirlibs
 
