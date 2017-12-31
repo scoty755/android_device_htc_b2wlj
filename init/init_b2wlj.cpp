@@ -81,11 +81,11 @@ void vendor_load_properties()
     std::string bootmid;
     std::string device;
 
-    platform = property_get("ro.board.platform");
+    platform = GetProperty("ro.board.platform", "");
     if (platform != ANDROID_TARGET)
         return;
 
-    bootmid = property_get("ro.boot.mid");
+    bootmid = GetProperty("ro.boot.mid", "");
 
     if (bootmid == "0PAG10000") {
         /* b2wlj */
