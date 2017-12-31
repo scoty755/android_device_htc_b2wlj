@@ -57,6 +57,10 @@ PRODUCT_BOOT_JARS += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    NfcNci \
-    nfc_nci.pn54x.default
+    android.hardware.nfc@1.0-impl \
+    nfc.msm8974 \
+    libnfc \
+    libnfc_ndef \
+    libnfc_jni \
+    Nfc
 
