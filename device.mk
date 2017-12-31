@@ -35,7 +35,8 @@ PRODUCT_COPY_FILES += \
     device/htc/b2wlj/configs/com.htc.software.market.xml:system/etc/permissions/com.htc.software.market.xml
 
 # Camera
-PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@1.0-impl \
     camera.msm8974 \
     Snap
 
