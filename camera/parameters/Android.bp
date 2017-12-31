@@ -1,5 +1,5 @@
 cc_library_static {
     name: "libcamera_parameters_ext",
-    include_dirs: ["device/htc/m8-common/include"],
+    include_dirs: ["device/htc/b2wlj/include"],
     srcs: ["CameraParameters.cpp", "CameraParameters_EXT.cpp"],
 }
