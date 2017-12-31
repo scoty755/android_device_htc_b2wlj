@@ -58,8 +58,6 @@ DEVICE_MANIFEST_FILE := device/htc/b2wlj/manifest.xml
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/htc/b2wlj/ril
-TARGET_NEEDS_GCC_LIBC := true
-TARGET_NEEDS_GCC_LIBRIL := true
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2818572288
