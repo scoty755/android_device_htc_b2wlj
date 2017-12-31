@@ -53,6 +53,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8974
 
+# HIDL
+DEVICE_MANIFEST_FILE := device/htc/b2wlj/manifest.xml
+
 # RIL
 BOARD_RIL_CLASS := ../../../device/htc/b2wlj/ril
 TARGET_NEEDS_GCC_LIBC := true
