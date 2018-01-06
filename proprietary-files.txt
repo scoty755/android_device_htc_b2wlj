@@ -59,7 +59,6 @@ vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so|b03772672144d4b750a5672c2922ade
 vendor/lib/libaptXScheduler.so|6a0a2d564fde8434018b9840ce81d976b4d4ab28
 
 # Camera
-bin/mm-qcamera-app
 bin/mm-qcamera-daemon
 lib/libalDE.so
 lib/libalDE_REC.so
@@ -282,7 +281,6 @@ bin/time_daemon
 vendor/lib/libtime_genoff.so
 
 # DRM and SEE
-bin/hcheck
 bin/qseecomd
 lib/libdrmdecrypt.so
 #vendor/lib/libdrmdiag.so
@@ -303,11 +301,6 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
-etc/firmware/hcheck.b00
-etc/firmware/hcheck.b01
-etc/firmware/hcheck.b02
-etc/firmware/hcheck.b03
-etc/firmware/hcheck.mdt
 
 # GPS - from bacon - LA.BF.1.1.3_rb1.13 tag
 lib/libloc_api_v02.so|9a8401afc86b54e73aa29995f228fd0243cee793
@@ -370,9 +363,6 @@ etc/firmware/widevine.b01
 etc/firmware/widevine.b02
 etc/firmware/widevine.b03
 etc/firmware/widevine.mdt
-
-# WiFi
-bin/ptt_socket_app
 
 # WiFi firmware
 #vendor/firmware/wcnss.b00
