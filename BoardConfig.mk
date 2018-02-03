@@ -67,6 +67,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_b2wlj
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/b2wlj/releasetools
 
+# Shipping API level (for CTS backward compatibility)
+PRODUCT_SHIPPING_API_LEVEL := 19
+
 # Inherit from the proprietary version
 -include vendor/htc/b2wlj/BoardConfigVendor.mk
 
