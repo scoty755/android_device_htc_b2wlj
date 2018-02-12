@@ -332,11 +332,13 @@ vendor/lib/libgsl.so|69ac0036c7e66431dbb4fb07dc5120f721c2458c
 vendor/lib/libllvm-qcom.so|deebd38f415f0888144cad9e5cbcbfa2439fe753
 vendor/lib/libOpenCL.so|8f9131c992b83126171a3e64622baf3635ed5424
 vendor/lib/libsc-a3xx.so|9e6329f434fae0f4eec7c246c648dca499f89375
-vendor/lib/libRSDriver_adreno.so|dbdf3a7e1257a4c383f6990e2d5dfc24822c1ebc
-vendor/lib/librs_adreno.so|06574dc89b1b9fd9832a109d3fd1afff7febc77f
-vendor/lib/librs_adreno_sha1.so|c53e83adfdc77192ed55503ba185858950c976d8
 vendor/lib/libscale.so|5cce434e527f9f392d4a98dd9474483a34a8c7ef
 vendor/lib/libuiblur.so|12dd942092c05d978a2a2db3ea37e0b410427b52
+
+# Graphics (RenderScript) - from bullhead - OPR4.170623.006 factory image
+vendor/lib/libRSDriver_adreno.so|2044baf0169177e52aba6d7138f80559ecf2b58d
+vendor/lib/librs_adreno.so|cceaf847d749ac2f1a3af3a1ae6ba653d93e0ed9
+vendor/lib/librs_adreno_sha1.so|e797997d3ac69dfa87904863672c5b9769c796cc
 
 # Keymaster firmware
 vendor/firmware/keymaster.b00
