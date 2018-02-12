@@ -287,9 +287,11 @@ vendor/lib/libxml.so|f965232d2dcb2a83d2189f4a36df644cd295086f
 # Sensors
 lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.msm8974.so
 
-# Time
+# Time services
+-app/TimeService/TimeService.apk:vendor/app/TimeService/TimeService.apk
 bin/time_daemon:vendor/bin/time_daemon
 vendor/lib/libtime_genoff.so
+vendor/lib/libTimeService.so
 
 # DRM firmware
 etc/firmware/cmnlib.b00:vendor/firmware/cmnlib.b00
