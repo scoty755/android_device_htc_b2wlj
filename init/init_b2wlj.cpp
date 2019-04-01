@@ -98,8 +98,8 @@ void vendor_load_properties()
         /* b2wlj */
         common_properties();
         cdma_properties("0", "10");
-        property_override("ro.product.model", "HTL23");
-        property_override("ro.build.fingerprint", "htc/HTL23_jp_kdi/htc_b2wlj:4.4.2/KOT49H/368778.1:user/release-keys");
+        property_override_dual("ro.product.model", "HTL23");
+        property_override_dual("ro.build.fingerprint", "htc/HTL23_jp_kdi/htc_b2wlj:4.4.2/KOT49H/368778.1:user/release-keys");
         property_override("ro.build.description", "1.17.970.1 CL368778 release-keys");
         property_override("ro.product.device", "htc_b2wlj");
         property_override("ro.build.product", "htc_b2wlj");
