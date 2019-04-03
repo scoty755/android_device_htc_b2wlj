@@ -1,4 +1,6 @@
-# Copyright (C) 2011 The Android Open Source Project
+#
+# Copyright (C) 2015-2016 The CyanogenMod Project
+#               2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,18 +13,24 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# FeliCa vendor tree
-$(call inherit-product-if-exists, vendor/htc/felica-common/felica-common-vendor.mk)
+BOARD_VENDOR := htc
+TARGET_VENDOR := htc
 
 # Inherit from b2
 $(call inherit-product, device/htc/b2wlj/device.mk)
 
-PRODUCT_NAME := full_b2wlj
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# FeliCa vendor tree
+$(call inherit-product-if-exists, vendor/htc/felica-common/felica-common-vendor.mk)
+
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := lineage_b2wlj
 PRODUCT_DEVICE := b2wlj
 PRODUCT_BRAND := KDDI
-PRODUCT_MANUFACTURER := htc
 PRODUCT_MODEL := HTC J butterfly
+PRODUCT_MANUFACTURER := HTC
+
