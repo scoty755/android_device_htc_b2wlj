@@ -190,23 +190,68 @@ vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
-# Graphics firmware
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
-etc/firmware/a300_pfp.fw
-etc/firmware/a300_pm4.fw
-etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
-etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+# DRM firmware
+etc/firmware/cmnlib.b00:vendor/firmware/cmnlib.b00
+etc/firmware/cmnlib.b01:vendor/firmware/cmnlib.b01
+etc/firmware/cmnlib.b02:vendor/firmware/cmnlib.b02
+etc/firmware/cmnlib.b03:vendor/firmware/cmnlib.b03
+etc/firmware/cmnlib.mdt:vendor/firmware/cmnlib.mdt
+etc/firmware/dxhdcp2.b00:vendor/firmware/dxhdcp2.b00
+etc/firmware/dxhdcp2.b01:vendor/firmware/dxhdcp2.b01
+etc/firmware/dxhdcp2.b02:vendor/firmware/dxhdcp2.b02
+etc/firmware/dxhdcp2.b03:vendor/firmware/dxhdcp2.b03
+etc/firmware/dxhdcp2.mdt:vendor/firmware/dxhdcp2.mdt
 
-# GPS - from bacon
-lib/libloc_api_v02.so|9a8401afc86b54e73aa29995f228fd0243cee793
-lib/libloc_ds_api.so|99a6f29860dbe0ed6fe3cbfdbb2277a63850f2c0
+# GPS - from bacon - LA.BF.1.1.3_rb1.13 tag
+lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so|9a8401afc86b54e73aa29995f228fd0243cee793
+lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so|99a6f29860dbe0ed6fe3cbfdbb2277a63850f2c0
 vendor/lib/hw/flp.default.so|c36ec0a3e6563fa8ddb96aaa7d0129249ce1d305
 vendor/lib/libflp.so|20994b3ac3ecd2094698ac98463aed97e3ce54ef
 vendor/lib/libgeofence.so|953c2720c98825cdfb2757839f5f86400c11a2d5
 vendor/lib/libizat_core.so|8d1b8f5c26cc9bcdacb402e253048211a6c07ba1
 vendor/lib/liblbs_core.so|3dea19e84a0d226ea3e5c92ec169f7e0fdbe5699
+
+# Graphics - from onyx - LA.BF.1.1.3_rb1.12 tag
+vendor/lib/egl/eglsubAndroid.so|b8a5790c5b4ba4cf0018c94066104610c821ed8e
+vendor/lib/egl/libEGL_adreno.so|cd29673e990dba8158e961e287a79dfbd852d095
+vendor/lib/egl/libGLESv1_CM_adreno.so|ae86d16ba499ac6cdd3cecb91ae6b16b4c303984
+vendor/lib/egl/libGLESv2_adreno.so|445be60045ff86d1d27545692134eacf0d89a6dc
+vendor/lib/egl/libq3dtools_adreno.so|2c12919492f1146b58f4f1c379dfe10d3320d476
+vendor/lib/libC2D2.so|d34587d5143bd09f847cb6686b03461a6e62cd87
+vendor/lib/libCB.so|3d2ad5bbff1cf4019d89c38689ec2ce3c186a3c1
+vendor/lib/libOpenCL.so|2b4b9692b16729b880d7881e68208183943f9612
+vendor/lib/libadreno_utils.so|a109e06c933811c578d129c0772a612cf5d94367
+vendor/lib/libbccQTI.so|94132d5d8421428001c2201a8915949c531b0ad9
+vendor/lib/libc2d30-a3xx.so|3666e0bf418e7ea7480b27c2c1ddd1bc86037044
+vendor/lib/libgsl.so|fafee1adf0e89325b3a1ea83d5205c02ebf860f3
+vendor/lib/libllvm-qcom.so|fc96c949b662fb34b287a4c0aa194984fbb57d7d
+vendor/lib/libsc-a3xx.so|231201bcfead5f930537d2fba22d89b00e673386
+vendor/lib/libscale.so|b44f44c633fa404d10e76aaa23593b516e08e2b8
+vendor/lib/libuiblur.so|12dd942092c05d978a2a2db3ea37e0b410427b52
+
+# Graphics (RenderScript) - from bullhead - OPR4.170623.006 factory image
+vendor/lib/libRSDriver_adreno.so|2044baf0169177e52aba6d7138f80559ecf2b58d
+vendor/lib/librs_adreno.so|cceaf847d749ac2f1a3af3a1ae6ba653d93e0ed9
+vendor/lib/librs_adreno_sha1.so|e797997d3ac69dfa87904863672c5b9769c796cc
+
+# Graphics firmware
+etc/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+etc/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+
+# IRDA
+-app/CIRModule/CIRModule.apk
+bin/cir_fw_update:vendor/bin/cir_fw_update
+etc/cir.img
+-framework/htcirlibs.jar
+lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.msm8974.so
+lib/libhtcirinterface_jni.so
+
+# Keymaster firmware
+vendor/firmware/keymaster.b00:vendor/firmware/keymaster/keymaster.b00
+vendor/firmware/keymaster.b01:vendor/firmware/keymaster/keymaster.b01
+vendor/firmware/keymaster.b02:vendor/firmware/keymaster/keymaster.b02
+vendor/firmware/keymaster.b03:vendor/firmware/keymaster/keymaster.b03
+vendor/firmware/keymaster.mdt:vendor/firmware/keymaster/keymaster.mdt
 
 # Media
 vendor/lib/libOmxAacDec.so
@@ -223,37 +268,6 @@ etc/firmware/venus.b03:vendor/firmware/venus.b03
 etc/firmware/venus.b04:vendor/firmware/venus.b04
 etc/firmware/venus.mbn:vendor/firmware/venus.mbn
 etc/firmware/venus.mdt:vendor/firmware/venus.mdt
-
-# Power
-#vendor/lib/libthermalioctl.so
-
-# QMI
-vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
-vendor/lib/libsmemlog.so
-vendor/lib/libqmi.so
-
-# Radio
-bin/netmgrd
-bin/qmuxd
-bin/rmt_storage
-lib/libmdmdetect.so
-vendor/lib/libnetmgr.so
-vendor/lib/libril-qc-qmi-1.so
-vendor/lib/libril-qcril-hook-oem.so
 
 # Perf - from bacon
 bin/mpdecision:vendor/bin/mpdecision|97ffb19a25cdb0ccf2e13e776fc7e8770fbf3901
@@ -285,7 +299,7 @@ bin/rmt_storage:vendor/bin/rmt_storage|16712c2d1ce8928c25e4ce97a05105cf7d6e4254
 vendor/lib/libxml.so|f965232d2dcb2a83d2189f4a36df644cd295086f
 
 # Sensors
-lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.msm8974.so
+vendor/lib/hw/sensors.msm8974.so|f1f3f8a30a95616b1b98dedae92305636aaebc9f
 
 # Time services
 -app/TimeService/TimeService.apk:vendor/app/TimeService/TimeService.apk
@@ -293,86 +307,34 @@ bin/time_daemon:vendor/bin/time_daemon
 vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 
-# DRM firmware
-etc/firmware/cmnlib.b00:vendor/firmware/cmnlib.b00
-etc/firmware/cmnlib.b01:vendor/firmware/cmnlib.b01
-etc/firmware/cmnlib.b02:vendor/firmware/cmnlib.b02
-etc/firmware/cmnlib.b03:vendor/firmware/cmnlib.b03
-etc/firmware/cmnlib.mdt:vendor/firmware/cmnlib.mdt
-etc/firmware/dxhdcp2.b00:vendor/firmware/dxhdcp2.b00
-etc/firmware/dxhdcp2.b01:vendor/firmware/dxhdcp2.b01
-etc/firmware/dxhdcp2.b02:vendor/firmware/dxhdcp2.b02
-etc/firmware/dxhdcp2.b03:vendor/firmware/dxhdcp2.b03
-etc/firmware/dxhdcp2.mdt:vendor/firmware/dxhdcp2.mdt
-
-# GPS - from bacon - LA.BF.1.1.3_rb1.13 tag
-lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so|9a8401afc86b54e73aa29995f228fd0243cee793
-lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so|99a6f29860dbe0ed6fe3cbfdbb2277a63850f2c0
-vendor/lib/hw/flp.default.so|c36ec0a3e6563fa8ddb96aaa7d0129249ce1d305
-vendor/lib/libflp.so|20994b3ac3ecd2094698ac98463aed97e3ce54ef
-vendor/lib/libgeofence.so|953c2720c98825cdfb2757839f5f86400c11a2d5
-vendor/lib/libizat_core.so|8d1b8f5c26cc9bcdacb402e253048211a6c07ba1
-vendor/lib/liblbs_core.so|3dea19e84a0d226ea3e5c92ec169f7e0fdbe5699
-
-# Graphics - from onyx - LA.BF.1.1.3_rb1.12 tag
-vendor/lib/egl/eglsubAndroid.so|cefa669b1d8e0b05afb46d435e7c9f65bfabea02
-vendor/lib/egl/libEGL_adreno.so|c409c4d27935de4597c8d31d5a43fff09c550531
-vendor/lib/egl/libGLESv1_CM_adreno.so|5fd26236efa861bdb6d756472b6659de97fbcfb6
-vendor/lib/egl/libGLESv2_adreno.so|7d01651611e3478803ee3fd471f96a5bbd4cdaae
-vendor/lib/egl/libq3dtools_adreno.so|93e4959a96ab75642aeafade2bfbdfa84bf22b09
-vendor/lib/libadreno_utils.so|35cfc92e07de8ac1c889fac32dc592a9974259dc
-vendor/lib/libbccQTI.so|e2c5ba0d6d6e0040ddf3a8981a8b9a521f9d1524
-vendor/lib/libC2D2.so|4bcc9bcb6acfde2b015249e3139b1aa78c6dfd12
-vendor/lib/libCB.so|c3315c47c7c1d89e1dfc3b8ebe688edcfecd67f1
-vendor/lib/libc2d30-a3xx.so|45529c0a6d38a51234486810d57a43684f8adff1
-vendor/lib/libgsl.so|69ac0036c7e66431dbb4fb07dc5120f721c2458c
-vendor/lib/libllvm-qcom.so|deebd38f415f0888144cad9e5cbcbfa2439fe753
-vendor/lib/libOpenCL.so|8f9131c992b83126171a3e64622baf3635ed5424
-vendor/lib/libsc-a3xx.so|9e6329f434fae0f4eec7c246c648dca499f89375
-vendor/lib/libscale.so|5cce434e527f9f392d4a98dd9474483a34a8c7ef
-vendor/lib/libuiblur.so|12dd942092c05d978a2a2db3ea37e0b410427b52
-
-# Graphics (RenderScript) - from bullhead - OPR4.170623.006 factory image
-vendor/lib/libRSDriver_adreno.so|2044baf0169177e52aba6d7138f80559ecf2b58d
-vendor/lib/librs_adreno.so|cceaf847d749ac2f1a3af3a1ae6ba653d93e0ed9
-vendor/lib/librs_adreno_sha1.so|e797997d3ac69dfa87904863672c5b9769c796cc
-
-# Keymaster firmware
-vendor/firmware/keymaster.b00
-vendor/firmware/keymaster.b03
-vendor/firmware/keymaster.b01
-vendor/firmware/keymaster.b02
-vendor/firmware/keymaster.mdt
-
-# IRDA
-#app/CIRModule/CIRModule.apk:app/CIRModule.apk
-bin/cir_fw_update:vendor/bin/cir_fw_update
-etc/cir.img
-#framework/htcirlibs.jar
-lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.msm8974.so
-lib/libhtcirinterface_jni.so
-
-# IRSC
-bin/irsc_util
-
-# Widevine
-vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L1.so
-
 # Widevine - from angler - OPR6.170623.017 factory image
 vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
 
-# WiFi firmware
-#vendor/firmware/wcnss.b00
-#vendor/firmware/wcnss.b01
-#vendor/firmware/wcnss.b02
-#vendor/firmware/wcnss.b04
-#vendor/firmware/wcnss.b06
-#vendor/firmware/wcnss.b07
-#vendor/firmware/wcnss.b08
-#vendor/firmware/wcnss.b09
-#vendor/firmware/wcnss.mdt
+# Widevine firmware
+etc/firmware/widevine.b00:vendor/firmware/widevine.b00
+etc/firmware/widevine.b01:vendor/firmware/widevine.b01
+etc/firmware/widevine.b02:vendor/firmware/widevine.b02
+etc/firmware/widevine.b03:vendor/firmware/widevine.b03
+etc/firmware/widevine.mdt:vendor/firmware/widevine.mdt
 
+# WiFi firmware - pinned to HTC package 5.07.1700.6 version
+vendor/firmware/wcnss.b00|e45f3acc13806ce9b36bdd426b35d26bae0485a3
+vendor/firmware/wcnss.b01|fdd7b80c8a9d5724904d8c860277ee1b3a329adc
+vendor/firmware/wcnss.b02|38306495d0e846c8854192c2a4aa1324ad6b9ef7
+vendor/firmware/wcnss.b04|f7fde83f3a632aa7d35cda03f46382f854932ef0
+vendor/firmware/wcnss.b06|417c8c87ee1f3ee6266ec1a5e2384a1405b261da
+vendor/firmware/wcnss.b07|fb3d8fb74570a077e332993f7d3d27603501b987
+vendor/firmware/wcnss.b08|6db99ec3aead0e567d869c2f5676483b66422d38
+vendor/firmware/wcnss.b09|96a8956b6b33e2df065131c40d3b0bd1e112612d
+vendor/firmware/wcnss.mdt|10ddd8a73e253fdf483902cb2515c827f155ca84
+
+# RIL
+bin/netmgrd:vendor/bin/netmgrd
+bin/qmuxd:vendor/bin/qmuxd
+lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
+vendor/lib/libcneapiclient.so:vendor/lib/libcneapiclient.so
+vendor/lib/libconfigdb.so:vendor/lib/libconfigdb.so
+vendor/lib/libnetmgr.so:vendor/lib/libnetmgr.so
+vendor/lib/libperipheral_client.so:vendor/lib/libperipheral_client.so
+vendor/lib/libril-qc-qmi-1.so:vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qcril-hook-oem.so:vendor/lib/libril-qcril-hook-oem.so
